@@ -1,0 +1,12 @@
+{
+  "name": "palmeria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./scss/style.scss -o ./scss/tailwindcss.min.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

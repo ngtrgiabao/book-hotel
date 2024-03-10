@@ -38,9 +38,57 @@
     if (is_active_sidebar('sidebar-front-page')) :
     ?>
         <div class="front-page-sidebar">
-            <?php
-            dynamic_sidebar('sidebar-front-page');
-            ?>
+            <section>
+                <form method="GET" class="grid grid-cols-1 md:grid-cols-5 w-auto">
+                    <p class="px-3 w-full my-2">
+                        <label>
+                            Check-in:
+                            <abbr title="">*</abbr>
+                        </label>
+                        <br />
+                        <input id="" class="fr-date-input" required="required" type="date" inputmode="none" value placeholder="Check-in Date" autocomplete="off" />
+                    </p>
+                    <p class="px-3 w-full my-2">
+                        <label>
+                            Check-out:
+                            <abbr title="">*</abbr>
+                        </label>
+                        <br />
+                        <input id="" class="fr-date-input" required="required" type="date" inputmode="none" value placeholder="Check-out Date" autocomplete="off" />
+                    </p>
+                    <p class="px-3 w-full my-2">
+                        <label>
+                            Adults:
+                        </label>
+                        <br />
+                        <select class="px-2">
+                            <option value="1" selected="selected">1</option>
+                            <?php
+                            for ($i = 2; $i <= 30; $i++) {
+                                echo '<option value="' . $i . '">' . $i . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </p>
+                    <p class="px-3 w-full my-2">
+                        <label>
+                            Children:
+                        </label>
+                        <br />
+                        <select class="px-2">
+                            <option value="1" selected="selected">1</option>
+                            <?php
+                            for ($i = 2; $i <= 30; $i++) {
+                                echo '<option value="' . $i . '">' . $i . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </p>
+                    <p class="px-3 w-full my-2 flex justify-center items-end">
+                        <input type="submit" class="button" value="Search">
+                    </p>
+                </form>
+            </section>
         </div>
     <?php
     endif;
